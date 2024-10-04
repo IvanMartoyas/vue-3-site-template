@@ -1,0 +1,61 @@
+//        grid flex start
+$flex_col: 12  
+.row
+    display: flex
+    flex-wrap: wrap
+
+
+$col_size: calc(100% / $flex_col)
+@for $i from 1 through $flex_col
+    .col-#{$i}
+        width: calc($col_size * $i)
+//        grid flex end
+$grid_col: 3
+
+@mixin row-grid
+    display: grid
+    grid-auto-rows: max-content
+    gap: 1rem
+    div
+        width: 100%
+$grid_col: 12
+.row-grid   
+    @include row-grid
+    grid-template-columns: repeat(12, 1fr)    
+    
+@media screen  and (min-width: 980px)
+    @for $i from 1 through $flex_col
+        .col-lg-#{$i}
+            width: calc($col_size * $i)
+    @for $i from 1 through $grid_col
+        .row-grid-lg-#{$i}
+            @include row-grid
+            grid-template-columns: repeat($i, 1fr)
+
+@media screen and (max-width: 980px) and (min-width: 768px)
+    @for $i from 1 through $flex_col
+        .col-md-#{$i}
+            width: calc($col_size * $i)
+    @for $i from 1 through $grid_col
+        .row-grid-md-#{$i}
+            @include row-grid
+            grid-template-columns: repeat($i, 1fr)
+
+@media screen and (max-width: 768px) and (min-width: 540px)
+    @for $i from 1 through $flex_col
+        .col-sm-#{$i}
+            width: calc($col_size * $i)
+    @for $i from 1 through $grid_col
+        .row-grid-sm-#{$i}
+            @include row-grid
+            grid-template-columns: repeat($i, 1fr)
+
+@media screen and (max-width: 540px)
+    @for $i from 1 through $flex_col
+        .col-xs-#{$i}
+            width: calc($col_size * $i)
+    @for $i from 1 through $grid_col
+            .row-grid-xs-#{$i}
+                @include row-grid
+                grid-template-columns: repeat($i, 1fr)
+
