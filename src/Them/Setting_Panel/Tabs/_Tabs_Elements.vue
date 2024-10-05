@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-import {Vlues_type} from '@/Them/Them_model'
+import {Vlues_type} from '@/Them/Enum_types.js'
 import MarginAndPadding from '@/Them/Setting_Panel/Elements/_Elements_margin_padding.vue'
 
 

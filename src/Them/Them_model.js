@@ -1,6 +1,4 @@
-export const Vlues_type = { REM: 'rem', PX: 'px', PROCENT: '%' };// units of measurement
-const Weight = { 100: '100',  200: '200', 300: '300', 400: '400', 500: '500', 600: '600', 700: '700',  800: '800',  900: '900'};// font-weight
-const Default_font = {SIZE: 16, FAMILY: 'Roboto, Arial', WEIGHT: 300, VLUES_TYPE: Vlues_type.REM}
+import {Vlues_type, Weight, Default_font} from '@/Them/Enum_types.js'
 // Colors_palettes_1 потом поменять на просто цветавую палитру
 const Colors_palettes_dark = {
     primmery: '#F54B64',

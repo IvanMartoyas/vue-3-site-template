@@ -119,7 +119,7 @@
 
 </template>
 <script>
-import {Vlues_type} from '@/Them/Them_model'
+import {Vlues_type} from '@/Them/Enum_types.js'
 
 export default {
     props: ['element', 'type'],
