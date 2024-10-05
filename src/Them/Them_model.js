@@ -1,4 +1,4 @@
-const Vlues_type = { REM: 'rem', PX: 'px', PROCENT: '%' };// units of measurement
+export const Vlues_type = { REM: 'rem', PX: 'px', PROCENT: '%' };// units of measurement
 const Weight = { 100: '100',  200: '200', 300: '300', 400: '400', 500: '500', 600: '600', 700: '700',  800: '800',  900: '900'};// font-weight
 const Default_font = {SIZE: 16, FAMILY: 'Roboto, Arial', WEIGHT: 300, VLUES_TYPE: Vlues_type.REM}
 // Colors_palettes_1 потом поменять на просто цветавую палитру
@@ -86,18 +86,40 @@ class _Element {
     }
 
     margin = {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        vlues_type: Vlues_type.REM,
+        left: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        right: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        top: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        bottom: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
     }
     padding = {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        vlues_type: Vlues_type.REM,
+        left: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        right: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        top: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
+        bottom: {
+            value: 0,
+            vlues_type: Vlues_type.REM,
+        },
     }
 
     constructor(data) { 
@@ -110,13 +132,13 @@ class _Element {
         
         this.colors.static.color = data.colors.color || Colors.base_text_color;
 
-        console.log("font type ",this.font.size.vlues_type)
+       // console.log("font type ",this.font.size.vlues_type)
 
-        if(data.margin != null) {
-            console.log("true")
-        } else {
-            console.log("false")
-        }
+        // if(data.margin != null) {
+        //     console.log("true")
+        // } else {
+        //     console.log("false")
+        // }
         
     }
 }
